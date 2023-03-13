@@ -24,4 +24,8 @@ public class Participante {
 		return this.puntos;
 	}
 
+	public void info() {
+		System.out.println("Nombre:" + this.nombre + "\nDNI:" + this.dni + "\nPuntaje total:" + this.getPuntaje());
+	}
+
 }
