@@ -1,4 +1,4 @@
-package modelo;
+package test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -6,18 +6,21 @@ import java.time.LocalDate;
 
 import org.junit.jupiter.api.Test;
 
-class CursoTest {
+import modeloP1.Concurso;
+import modeloP1.Participante;
+
+class ConcursoTest {
 
 	@Test
 	void testInscribirParticipantePrimerDia() {
-
+		System.out.println("Primer dia");
 		boolean resultadoEsperado = true;
 		int duracionDelCurso = 10;
 		LocalDate fecha = LocalDate.now();
-		Curso java = new Curso("java", 5, 1234, fecha, duracionDelCurso);
+		Concurso java = new Concurso("java", 5, 1234, fecha, duracionDelCurso);
 		Participante juan = new Participante("Juan", 18493526);
 		assertEquals(resultadoEsperado, java.inscribirParticipante(juan));
-		java.mostrarParticipante();
+		java.mostrarParticipantes();
 
 	}
 
@@ -27,31 +30,23 @@ class CursoTest {
 		boolean resultadoEsperado = true;
 		int duracionDelCurso = 10;
 		LocalDate fecha = LocalDate.now().plusDays(-2);
-		Curso java = new Curso("java", 5, 1234, fecha, duracionDelCurso);
+		Concurso java = new Concurso("java", 5, 1234, fecha, duracionDelCurso);
 		Participante juan = new Participante("Juan", 18493526);
 		assertEquals(resultadoEsperado, java.inscribirParticipante(juan));
-		java.mostrarParticipante();
+		java.mostrarParticipantes();
 
 	}
 
 	@Test
 	void testInscribirParticipanteFueraDeTermino() {
 
-		boolean resultadoEsperado = true;
+		boolean resultadoEsperado = false;
 		int duracionDelCurso = 5;
 		LocalDate fecha = LocalDate.now().plusDays(7);
-		Curso java = new Curso("java", 5, 1234, fecha, duracionDelCurso);
+		Concurso java = new Concurso("java", 5, 1234, fecha, duracionDelCurso);
 		Participante juan = new Participante("Juan", 18493526);
 		assertEquals(resultadoEsperado, java.inscribirParticipante(juan));
-		java.mostrarParticipante();
 
 	}
 
-//	@Test
-//	void testMostrarParticipante() {
-
-//		Curso java = new Curso("java", 5, 1234);
-//		java.mostrarParticipante();
-//	}
-//
 }

@@ -1,10 +1,10 @@
-package modelo;
+package modeloP1;
 
 public class Participante {
 	// --- Atributos ---
-	String nombre;
-	int dni;
-	int puntos;
+	private String nombre;
+	private int dni;
+	private int puntos;
 
 	// --- Constructor/es ---
 
@@ -24,8 +24,13 @@ public class Participante {
 		return this.puntos;
 	}
 
+	public String getNombre() {
+		return this.nombre;
+	}
+
 	public void info() {
-		System.out.println("Nombre:" + this.nombre + "\nDNI:" + this.dni + "\nPuntaje total:" + this.getPuntaje());
+		System.out.println(
+				"Nombre:" + this.nombre + "\nDNI:" + this.dni + "\nPuntaje total:" + this.getPuntaje() + "\n\n");
 	}
 
 }
