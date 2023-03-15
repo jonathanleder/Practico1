@@ -23,5 +23,9 @@ public abstract class Tarjeta {
 		return importe * 0.05;
 	}
 
+	public void detallesTarjeta() {
+		System.out.println("Titular: " + this.titular + "\nNumero de Tarjeta: " + this.numTarjeta);
+	}
+
 	protected abstract double calcularImporte(Bebida unaBebida, Plato unPlato);
 }
