@@ -3,10 +3,13 @@ package modeloP2;
 public class Mesa {
 
 	private int capacidad;
-	private int numeroMesa;
-	private boolean ocupada;
-	public float bebidas;
-	public float platos;
-	private Comensal uncliente;
+	public Bebida bebidas;
+	public Plato platos;
+
+	public Mesa(int capacidad, Bebida bebida, Plato plato) {
+		this.capacidad = capacidad;
+		this.bebidas = bebida;
+		this.platos = plato;
+	}
 
 }
