@@ -10,7 +10,7 @@ public class DispositivoElectronico {
 
 	public double calcularCostoTotal(Tarjeta unaTarjeta, double propina) {
 		double descuento = unaTarjeta.calcularDescuento(pedido.importeBebida(), pedido.importePlato());
-		System.out.println("descuento retorna: " + descuento);
+//		System.out.println("descuento retorna: " + descuento);
 		return pedido.importeTotal() + pedido.calcularPropina(propina) - descuento;
 	}
 

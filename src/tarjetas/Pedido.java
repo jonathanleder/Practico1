@@ -49,7 +49,6 @@ public class Pedido {
 	}
 
 	public double calcularPropina(double porcentaje) {
-		System.out.println("Propina retorna: " + (importeTotal() * (porcentaje / 100)));
 		return importeTotal() * (porcentaje / 100);
 	}
 

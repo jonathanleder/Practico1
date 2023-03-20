@@ -8,15 +8,13 @@ public class TarjetaVisa extends Tarjeta {
 	}
 
 	@Override
-	public void pagar(Pedido unPedido, int porcentajePropina) {
-		this.saldo -= calcularCosto(unPedido, porcentajePropina);
+	public void pagar(double importeTotal) {
+		this.saldo -= importeTotal;
 	}
 
 	@Override
-	public double calcularDescuento(Pedido unPedido, int porcentajePropina) {
-		double descuento = unPedido.importeBebida() * 0.03;// 3% sobre las bebidas
-		double propina = this.calcularPropina(unPedido.importeTotal(), porcentajePropina);
-		return unPedido.importeTotal() - descuento + propina;
+	public double calcularDescuento(double bebida, double plato) {
+		return bebida * 0.03;// 3% sobre la bebida
 	}
 
 }
