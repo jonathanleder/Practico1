@@ -24,8 +24,6 @@ class TarjetaTest {
 		TarjetaComarcaPlus comarca = new TarjetaComarcaPlus("Jonathan Leder", 456123789, 850);
 
 		DispositivoElectronico miDispositivo = new DispositivoElectronico(miPedido);
-		double esperado = miDispositivo.calcularCostoTotal(comarca, 5);
-//		System.out.println("Esperado vale: " + esperado);
 		assertEquals(valorEsperado, miDispositivo.calcularCostoTotal(comarca, 5));
 	}
 
@@ -40,8 +38,6 @@ class TarjetaTest {
 		TarjetaMastercard master = new TarjetaMastercard("Jonathan Leder", 456123789, 2000);
 
 		DispositivoElectronico miDispositivo = new DispositivoElectronico(miPedido);
-		double esperado = miDispositivo.calcularCostoTotal(master, 5);
-		System.out.println("Esperado vale: " + esperado);
 		assertEquals(valorEsperado, miDispositivo.calcularCostoTotal(master, 5));
 	}
 
@@ -54,8 +50,6 @@ class TarjetaTest {
 		TarjetaVisa visa = new TarjetaVisa("Jonathan Leder", 456123789, 850);
 
 		DispositivoElectronico miDispositivo = new DispositivoElectronico(miPedido);
-		double esperado = miDispositivo.calcularCostoTotal(visa, 5);
-		// System.out.println("Esperado vale: " + esperado);
 		assertEquals(valorEsperado, miDispositivo.calcularCostoTotal(visa, 5));
 	}
 
@@ -67,8 +61,6 @@ class TarjetaTest {
 		Pedido miPedido = new Pedido(ravioles, gaseosa);
 		TarjetaViedma viedma = new TarjetaViedma("Jonathan Leder", 456123789, 850);
 		DispositivoElectronico miDispositivo = new DispositivoElectronico(miPedido);
-		double esperado = miDispositivo.calcularCostoTotal(viedma, 5);
-		// System.out.println("Esperado vale: " + esperado);
 		assertEquals(valorEsperado, miDispositivo.calcularCostoTotal(viedma, 5));
 	}
 
