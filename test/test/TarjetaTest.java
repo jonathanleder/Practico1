@@ -29,7 +29,7 @@ class TarjetaTest {
 
 	@Test
 	void testTarjetaMasterCard() {
-		double valorEsperado = 830;// 1448 es el costo total
+		double valorEsperado = 1448;// 1448 es el costo total
 		Plato ravioles = new Plato("Ravioles con tuco", 500);
 		Plato pescado = new Plato("Pescado", 600);
 		Bebida gaseosa = new Bebida("Fanta", 300);

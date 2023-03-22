@@ -18,12 +18,6 @@ public abstract class Tarjeta {
 
 	public abstract double calcularDescuento(double bebidas, double platos);
 
-	public String detallesTarjeta() {
-		String saldo = String.valueOf(this.saldo);
-		String numTarjeta = String.valueOf(this.numTarjeta);
-		return titular + saldo + numTarjeta;
-	}
-
 	public double saldoDisponible() {
 		return this.saldo;
 	}

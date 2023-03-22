@@ -15,6 +15,11 @@ public class Pedido {
 		bebidas.add(unaBebida);
 	}
 
+	public Pedido(ArrayList<Plato> platos, ArrayList<Bebida> bebidas) {
+		this.platos = platos;
+		this.bebidas = bebidas;
+	}
+
 	public void agregarBebida(Bebida unaBebida) {
 		this.bebidas.add(unaBebida);
 	}
